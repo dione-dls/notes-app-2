@@ -3,7 +3,7 @@ function testNoteDefaultText(){
   assert.isTrue(note.text === "My favourite language is Javascript");
 };
 
-testNoteDefaultText();
+  testNoteDefaultText();
 
 
 function testshowText(){
@@ -11,4 +11,4 @@ function testshowText(){
   assert.isTrue(note.text === "Hello");
 };
 
-testshowText();
+  testshowText();

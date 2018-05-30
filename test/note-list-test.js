@@ -7,8 +7,16 @@ function testNoteListDefaultIsEmpty(){
 function testaddNote(){
   var note = new Note("shopping list")
   var noteList2 = new NoteList()
-  console.log(noteList2);
-  console.log(noteList2.addNote(note));
+  // console.log(noteList2);
+  // console.log(noteList2.addNote(note));
   assert.isTrue(note.showText() === "shopping list");
 };
   testaddNote();
+
+  function testcreateNote(){
+  var note = new Note("I like to read")
+  var noteList = new NoteList()
+  noteList.createNote(note)
+  assert.isTrue(note.text === "I like to read");
+};
+  testcreateNote();
