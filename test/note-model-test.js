@@ -6,9 +6,9 @@ function testNoteDefaultText(){
   testNoteDefaultText();
 
 
-function testshowText(){
+function testshowTextfunction(){
   var note = new Note("Hello");
   assert.isTrue(note.text === "Hello");
 };
 
-  testshowText();
+  testshowTextfunction();
