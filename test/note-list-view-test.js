@@ -1,17 +1,29 @@
 (function(){
   function testviewNoteList(){
     var noteList = new NoteList();
-    assert.isTrue(viewNoteList(noteList) === "<ul></ul>");
+    assert.isTrue(viewNoteList(noteList) === "");
   }
 
   testviewNoteList();
 })();
 
 (function(){
-  function testviewNoteList(){
-    var noteList = new NoteList([new Note("Coffee")]);
+  function testviewNoteListOne(){
+    var noteList = new NoteList();
+    noteList.createNote("Coffee")
     assert.isTrue(viewNoteList(noteList) === "<ul><li><div>Coffee</div></li></ul>");
   }
 
-  testviewNoteList();
+  testviewNoteListOne();
+})();
+
+(function(){
+  function testviewNoteListTwo(){
+    var noteList = new NoteList();
+    noteList.createNote("Coffee")
+    noteList.createNote("Milk")
+    assert.isTrue(viewNoteList(noteList) === "<ul><li><div>Coffee</div></li><li><div>Milk</div></li></ul>");
+  }
+
+  testviewNoteListTwo();
 })();

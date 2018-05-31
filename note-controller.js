@@ -1,4 +1,5 @@
-function changeText(newText){
+(function(exports) {
+  function changeText(newText){
   var element = document.getElementById('app');
   console.log(element);
   element.innerHTML = newText
@@ -7,3 +8,5 @@ function changeText(newText){
 window.onload = function(){
   changeText('howdy')
 };
+  exports.changeText = changeText;
+})(this);
