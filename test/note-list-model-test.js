@@ -10,17 +10,22 @@
     var noteList = new NoteList();
     noteList.addNote(note)
     noteList.addNote(note2)
-    console.log(noteList.list)
     assert.areArraysEqual(noteList.list, ['Coffee', 'Milk']);
   };
     testaddNote();
 
   function testcreateNote(){
-    // debugger;
     var noteList = new NoteList();
-    console.log(noteList);
     noteList.createNote("Cream")
-    console.log(noteList.list[0].text);
     assert.isTrue(noteList.list[0].text == "Cream");
   };
     testcreateNote();
+
+  function testGetNotes() {
+    var noteList = new NoteList();
+    var note = new Note("Cream")
+    noteList.addNote(note)
+    assert.isTrue(noteList.getNotes()[0].text === "Cream")
+  };
+
+  testGetNotes();

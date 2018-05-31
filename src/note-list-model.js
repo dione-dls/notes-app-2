@@ -12,6 +12,10 @@
     this.addNote(note);
   };
 
+  NoteList.prototype.getNotes = function() {
+    return this.list;
+  }
+
   exports.NoteList = NoteList;
 
 })(this);

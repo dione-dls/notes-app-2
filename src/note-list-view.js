@@ -1,15 +1,20 @@
 (function(exports) {
 
-exports.viewNoteList = function(noteList) {
+function ViewNoteList(noteList) {
+  this.noteListView = noteList;
+}
 
-  if (noteList.list.length !== 0) {
+ViewNoteList.prototype.stringHTML = function() {
+  debugger;
+  console.log(noteListView)
+  if (this.noteListView.length !== 0) {
 
-  return "<ul>"  + noteList.list.map(function(note){
+  return "<ul>"  + noteListView.map(function(note){
       return "<li><div>"  + note.text + "</div></li>"
     }).join("") + "</ul>"
-  }else {
+  } else {
     return "";
-    }
-  };
-
+  }
+};
+exports.ViewNoteList = ViewNoteList;
 })(this);
