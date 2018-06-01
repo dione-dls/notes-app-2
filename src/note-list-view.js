@@ -5,11 +5,10 @@ function ViewNoteList(noteList) {
 }
 
 ViewNoteList.prototype.stringHTML = function() {
-  debugger;
-  console.log(noteListView)
-  if (this.noteListView.length !== 0) {
+  var notes = this.noteListView.getNotes();
+  if (notes.length !== 0) {
 
-  return "<ul>"  + noteListView.map(function(note){
+  return "<ul>"  + notes.map(function(note){
       return "<li><div>"  + note.text + "</div></li>"
     }).join("") + "</ul>"
   } else {

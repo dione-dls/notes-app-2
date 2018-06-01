@@ -2,6 +2,7 @@
   function testviewNoteList(){
     var noteList = new NoteList();
     var viewNoteList = new ViewNoteList(noteList);
+    console.log(viewNoteList)
     assert.isTrue(viewNoteList.stringHTML() === "");
   }
   testviewNoteList();

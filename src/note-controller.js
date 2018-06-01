@@ -13,9 +13,10 @@
   }
 
 var noteList = new NoteList();
-var noteCotroller = new NoteController(noteList)
-console.log(noteCotroller);
+var noteController = new NoteController(noteList)
+console.log(noteController);
 console.log(this.noteList)
-noteCotroller.getHTML(noteList);
+noteConroller.getHTML(noteList);
+
 exports.NoteController = NoteController;
 })(this);
